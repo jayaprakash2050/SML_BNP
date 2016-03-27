@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="RTarget" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{e37ab32a-3f3c-4099-93d4-7bca71cdda48}</ProjectGuid>
+    <AssemblyName>SML_BNP</AssemblyName>
+    <Name>SML_BNP</Name>
+    <RootNamespace>SML_BNP</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="DataPreProcess.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DataPreProcess_HF_3.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="DataPreProcess_HF_4.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Example.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SML_Functions.R">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Target Name="RTarget">
+    <Message Text="Executing R script" />
+  </Target>
+</Project>
